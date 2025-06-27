@@ -13,11 +13,3 @@ export interface Dimensions {
     width: number;
     depth: number;
 }
-
-export interface ShapeConfig {
-    id: number;
-    position: Position;
-    type: UnitType;
-    dimensions: Dimensions;
-    colour: string;
-}

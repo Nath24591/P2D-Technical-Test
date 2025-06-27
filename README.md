@@ -9,6 +9,13 @@ This server should pick up on changes you make. Simply run it once, then save yo
 ```bash
 npm run dev
 ```
+
+## Run Tests
+To run the Vitest test suite, use:
+```bash
+npm run test
+```
+
 ---
 
 # Wren Technical Task

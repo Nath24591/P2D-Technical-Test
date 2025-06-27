@@ -3,14 +3,21 @@ import { Sprite } from './Sprite';
 
 export class Shape {
     private sprite: Sprite;
+    private originalColour: string;
 
     constructor(
         private type: UnitType,
         private dimensions: Dimensions,
         private position: Position,
         private colour: string,
+        private id?: number,
     ) {
+        this.originalColour = colour;
         this.sprite = new Sprite(this);
+    }
+
+    public getId(): number | undefined {
+        return this.id;
     }
 
     public getPosition(): Position {
@@ -37,7 +44,15 @@ export class Shape {
         this.colour = colour;
     }
 
+    public getOriginalColour(): string {
+        return this.originalColour;
+    }
+
     public draw(context: CanvasRenderingContext2D): void {
         this.sprite.draw(context);
+    }
+
+    public getLabel(): string[] {
+        return [this.getType()];
     }
 }
